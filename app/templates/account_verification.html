@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Verification</title>
+    <style>
+      /* Basic styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #000000; /* Black border */
+      }
+      .logo {
+        display: block;
+        margin: 0 auto;
+        width: 55%;
+      }
+      .verification-code {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="https://i.ibb.co/NxWQ6bL/logo-black.jpg"
+        alt="logo"
+        class="logo"
+      />
+      <div class="verification-code">
+        <h3>Verify Your Email Address</h3>
+        <p>
+          Welcome to <strong>FezTool</strong> <br />
+          Thank you for signing up! <br />
+          Please use the following verification code:
+        </p>
+        <h2>{{otp_code}}</h2>
+        <p>
+          <small>
+            If you haven't signed up please ignore this message, or you can
+            contact us at
+            <a href="mailto:info@feztool.com"> info@feztool.com </a>
+          </small>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

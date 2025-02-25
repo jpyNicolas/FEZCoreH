@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Request Status</title>
+    <style>
+      /* Basic styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid #000000; /* Black border */
+      }
+      .logo {
+        display: block;
+        margin: 0 auto;
+        width: 55%;
+      }
+      .message {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="https://i.ibb.co/NxWQ6bL/logo-black.jpg" alt="logo" class="logo" />
+      <div class="message">
+        {% if approved %}
+        <h3>Demo Request Approved</h3>
+        <p>
+          Dear <strong>{{company_name}}</strong>,<br />
+          Congratulations! Your demo request has been approved.<br />
+          You can now access your demo by clicking the link below:
+        </p>
+        <p><a href="{{url}}">Start Your Demo</a></p>
+        <p><small>The link will expire in {{expired_in}}.</small></p>
+        {% else %}
+        <h3>Demo Request Rejected</h3>
+        <p>
+          Dear <strong>{{company_name}}</strong>,<br />
+          We regret to inform you that your demo request has been rejected at this time.<br />
+          If you have any questions, please contact us at
+          <a href="mailto:info@feztool.com">info@feztool.com</a>
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
