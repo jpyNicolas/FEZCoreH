@@ -1,4 +1,4 @@
-# FEZCore API Documentation
+# FEZCore API Documentation.
 
 This document provides example requests for each endpoint defined in the FEZCore API.
 
